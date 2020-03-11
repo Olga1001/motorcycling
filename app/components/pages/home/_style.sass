@@ -1,7 +1,7 @@
 .wrap
   background: linear-gradient(180deg, #E5E5E5 0%, rgba(255, 255, 255, 0) 100%)
 .banner
-  background: url("../img/banner.jpg") no-repeat left center / contain
+  background: url("../img/banner.jpg") no-repeat left center / cover
   height: 180px
   padding: 15px 50px
   width: 100%
@@ -94,9 +94,21 @@
     display: flex
     &_link
       margin-left: 10px
-    &_img
-      width: 20px
-      height: 20px
+      path
+        transition: all 0.3s ease
+    &_fs
+      &:hover
+        path
+          fill: #4267b2
+    &_in
+      &:hover
+        path
+          fill: #0073b0
+    &_inst
+      &:hover
+        path
+          fill: url("#paint0_linear");
+
 .news
   padding: 50px 0 70px
   .card

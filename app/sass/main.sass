@@ -77,7 +77,6 @@ blockquote, q
 blockquote:before, blockquote:after, q:before, q:after
   content: ''
   content: none
-
 a
   outline: none
   text-decoration: none
@@ -107,6 +106,8 @@ input, textarea
   font-size: 16px
   outline: none
   color: #505050
+  appearance: none
+  border-radius: 0
 
 button
   cursor: pointer
@@ -129,6 +130,8 @@ button
   &-top
     box-shadow: 0px 10px 25px rgba(115, 123, 128, 0.2)
     padding: 15px 0 20px
+    position: relative
+    z-index: 3
   &-call
     font-family: "helveticaneue", sans-serif
     font-style: normal
@@ -161,6 +164,10 @@ button
     line-height: 36px
     display: block
     color: #939397
+    font-family: "Oswald-Regular", sans-serif
+    font-style: normal
+    font-weight: normal
+    text-transform: uppercase
 .socials
   &-img
     width: 32px
@@ -170,12 +177,45 @@ button
     margin-bottom: 25px
     &:last-child
       margin-right: 0
+.burger
+  display: none
+  width: 38px
+  height: 38px
+  position: relative
+  cursor: pointer
+  &:hover
+    .burger-line
+      background: #039BE5
+  &-line
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    height: 2px
+    width: 30px
+    background: #000000
+    transition: all 0.3s ease
+    &_top
+      top: 10px
+    &_center
+      top: 50%
+      transform: translate(-50%, -50%)
+    &_bottom
+      bottom: 10px
+  &.active
+    .burger-line_top
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%) rotate(225deg)
+    .burger-line_center
+      opacity: 0
+    .burger-line_bottom
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%) rotate(-225deg)
 .menu
   padding: 20px 0
   &-list
     margin: 0 10px
-    &:last-child
-      margin: 0
   &-link
     padding: 10px 16px
     display: block
@@ -189,6 +229,7 @@ button
 .search
   position: relative
   margin-left: 50px
+  min-height: 52px
   &-input
     border-bottom: 1px solid #039BE5
     max-width: 203px
@@ -202,12 +243,14 @@ button
     text-transform: capitalize
     color: #000000
     background: transparent
+    transition: all 0.3s ease
   &-btn
     position: absolute
     right: 0
     top: 50%
     transform: translateY(-50%)
     padding: 10px
+    background: #ffffff
   &-icon
     width: 18px
     height: 18px
@@ -230,12 +273,19 @@ button
     padding: 10px
     height: 55px
     margin: 10px auto 0
+    &:hover
+      .arrow-line
+        width: 0
+        &-hover
+          width: 50px
+          margin-right: 10px
 .arrow-line
   position: relative
   height: 1px
   background: #FFFFFF
   width: 60px
   margin-left: 15px
+  transition: all .2s ease-in-out
   &:before
     content: ''
     position: absolute
@@ -246,11 +296,19 @@ button
     border-style: solid
     border-width: 4px 0 3px 5px
     border-color: transparent transparent transparent #ffffff
+  &-hover
+    transition: all .2s ease-in-out
+    position: relative
+    height: 1px
+    background: #FFFFFF
+    width: 0
+
 .text-42
   font-size: 42px
   line-height: 62px
   text-transform: uppercase
   color: #FFFFFF
+  text-align: center
 .text-18
   font-size: 18px
   line-height: 27px
