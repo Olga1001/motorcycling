@@ -34,7 +34,7 @@
   font-family: "Roboto-Regular", sans-serif
   font-size: 16px
   line-height: 40px
-  color: #039BE5
+  color: $color1
   border-bottom: 1px solid #E5E5E5
   padding: 0 15px
   cursor: pointer
@@ -45,7 +45,7 @@
   margin-top: 20px
   .text-18
     text-transform: initial
-    color: #039BE5
+    color: $color1
     line-height: 20px
     font-family: "Roboto-Regular", sans-serif
     margin-bottom: 15px
@@ -58,7 +58,7 @@
     height: 100%
     object-fit: cover
   &-blue
-    background: #039BE5
+    background: $color1
     transform: skew(-25deg)
     position: absolute
     left: 6px
@@ -94,6 +94,7 @@
     display: flex
     &_link
       margin-left: 10px
+      max-height: 20px
       path
         transition: all 0.3s ease
     &_fs
@@ -107,7 +108,7 @@
     &_inst
       &:hover
         path
-          fill: url("#paint0_linear");
+          fill: url("#paint0_linear")
 
 .news
   padding: 50px 0 70px

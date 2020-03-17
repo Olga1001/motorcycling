@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    //HOME
     $(".select-item, .option").click(function () {
         $(this).find(".select-arrow").toggleClass('active');
         $(this).closest(".select").find(".select-drop").slideToggle(300);
@@ -13,5 +14,35 @@ $(document).ready(function () {
             $(this).closest(".search").toggleClass('active');
         });
     }
+    
+    //EVENTS
+    $(".tab, .events__year").click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+
+    if (window.matchMedia("(max-width: 991px)").matches) {
+        $(".calendar-title").click(function (e) {
+            e.stopPropagation();
+            $(this).find(".calendar-arrow").toggleClass('active');
+            $(".news__calendar").slideToggle(300);
+        });
+    }
+    $("body").click(function () {
+        $(".calendar-arrow").removeClass('active');
+        $(".news__calendar").slideUp(300);
+    });
+    $(".news__calendar").click(function (e) {
+        e.stopPropagation();
+    });
+
 
 });
+$(document).ready(function () {
+    //NEWS
+    $(".date").datepicker({
+        autoclose: true,
+        todayHighlight: true,
+    }).datepicker('update', new Date());
+});
+
+

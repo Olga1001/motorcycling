@@ -1,0 +1,131 @@
+.events
+  padding-top: 22px
+  .select
+    @include select
+    margin-right: 15px
+    select
+      min-width: 168px
+  &__box
+    margin-top: 20px
+  &__year
+    font-family: "Roboto-Regular", sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 19px
+    text-align: center
+    text-transform: uppercase
+    color: #000000
+    padding: 4px 8px
+    border: 1px solid transparent
+    border-radius: 2px
+    box-sizing: border-box
+    margin-bottom: 20px
+    &.active
+      border: 1px solid $color1
+      color: $color1
+.calendar
+  &-arrow
+    width: 9px
+    margin-left: 8px
+    display: none
+    transition: all 0.3s ease
+    &.active
+      transform: scale(1,-1)
+  &__week, &__day
+    &-item
+      width: 30px
+      height: 20px
+      margin: 0 10px
+      text-align: center
+      line-height: 19px
+      font-family: "Roboto-Regular", sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      color: #000000
+      opacity: 0.7
+      &.today
+        font-family: "Roboto-Bold", sans-serif
+      &.active
+        color: $color1
+        border: 1px solid $color1
+        border-radius: 2px
+  &__week
+    border-bottom: 1px solid #000000
+    &-item
+      font-family: "Roboto-Medium", sans-serif
+  &__mouth
+    font-family: "Roboto-Medium", sans-serif
+    font-style: normal
+    font-weight: 500
+    font-size: 12px
+    line-height: 24px
+    text-transform: uppercase
+    color: $color1
+    margin-top: 16px
+.tabs
+  margin-bottom: 17px
+.tab
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1)
+  font-family: "Oswald-Regular", sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 18px
+  line-height: 27px
+  text-align: center
+  text-transform: uppercase
+  min-width: 170px
+  cursor: pointer
+  &.active
+    border-bottom: 2px solid $color1
+    color: $color1
+.table
+  &__main, &__item
+    font-family: "Roboto-Regular", sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 16px
+    color: #000000
+    padding: 12px 8px
+    &:first-child
+      width: 54px
+    &:nth-child(2)
+      width: 110px
+    &:nth-child(3)
+      width: 170px
+    &:nth-child(4)
+      width: 400px
+    &:last-child
+      width: 156px
+    .link
+      line-height: 14px
+  &__main
+    font-size: 12px
+    font-family: "Roboto-Bold", sans-serif
+    text-transform: uppercase
+  ul
+    border-bottom: 1px solid rgba(196, 196, 196, 0.3)
+    &:first-child
+      border-bottom: 1px solid #000000
+    &:nth-child(2n+2)
+      background: #F9F9F9
+  &__item-name
+    display: block
+    font-size: 12px
+    text-transform: uppercase
+    font-family: "Roboto-Bold", sans-serif
+    margin-bottom: 8px
+.mobile__table-bottom
+  .table__item
+    width: 33.33%!important
+.mobile__table-item
+  border-bottom: 1px solid rgba(196, 196, 196, 0.3)
+  &:nth-child(odd)
+    background: #F9F9F9
+.map
+  margin-top: 30px
+  iframe
+    width: 100%
+

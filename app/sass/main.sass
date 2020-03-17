@@ -108,7 +108,55 @@ input, textarea
   color: #505050
   appearance: none
   border-radius: 0
+textarea
+  background: #FFFFFF
+  border: 1px solid #E5E5E5
+  box-sizing: border-box
+  border-radius: 2px
+  height: 111px
+  width: 100%
+  margin: 20px 0 15px
+  padding: 20px 15px
+  font-size: 16px
+  line-height: 20px
+  font-family: "Roboto-Bold", sans-serif
+  font-style: normal
+  font-weight: bold
+  &::-webkit-input-placeholder
+    font-family: "Roboto-Bold", sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    text-transform: inherit
+    color: rgba(153, 153, 153, 0.87)
 
+  &:-moz-placeholder
+    font-family: "Roboto-Bold", sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    text-transform: inherit
+    color: rgba(153, 153, 153, 0.87)
+
+  &::-moz-placeholder
+    font-family: "Roboto-Bold", sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    text-transform: inherit
+    color: rgba(153, 153, 153, 0.87)
+
+  &:-ms-input-placeholder
+    font-family: "Roboto-Bold", sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    text-transform: inherit
+    color: rgba(153, 153, 153, 0.87)
 button
   cursor: pointer
   outline: none
@@ -183,6 +231,7 @@ button
   height: 38px
   position: relative
   cursor: pointer
+  z-index: 8
   &:hover
     .burger-line
       background: #039BE5
@@ -212,6 +261,32 @@ button
       top: 50%
       left: 50%
       transform: translate(-50%, -50%) rotate(-225deg)
+.breadcrumbs
+  display: flex
+  padding-top: 7px
+  justify-content: flex-end
+  &__link,  &__item
+    font-family: "Roboto-Regular", sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 20px
+    color: #A2AAAE
+  &__link
+    color: #000000
+    position: relative
+    padding-right: 14px
+    margin-right: 2px
+    float: left
+    &:before
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      width: 10px
+      height: 17px
+      background: url("../img/arrow_breadcrumbs.svg") no-repeat center / 10px 9px
+
 .menu
   padding: 20px 0
   &-list
@@ -226,6 +301,10 @@ button
     line-height: 27px
     text-transform: uppercase
     color: #039BE5
+    &.active
+      border: 1px solid #039BE5
+      box-sizing: border-box
+      border-radius: 2px
 .search
   position: relative
   margin-left: 50px
@@ -279,6 +358,18 @@ button
         &-hover
           width: 50px
           margin-right: 10px
+    &__text
+      margin-left: 60px
+  &-blue
+    background: #039BE5
+    border-radius: 2px
+    font-family: "Roboto-Bold", sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 20px
+    color: #FFFFFF
+    padding: 8px 26px 6px
 .arrow-line
   position: relative
   height: 1px
@@ -321,6 +412,41 @@ button
   font-size: 14px
   line-height: 20px
   color: rgba(0, 0, 0, 0.87)
+  &__main
+    text-transform: uppercase
+    font-family: "Roboto-Bold", sans-serif
+    font-style: normal
+    font-weight: 700
+.list
+  margin-bottom: 15px
+  &__item
+    margin: 0 5px 5px!important
+    position: relative
+    padding-left: 10px
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 7.5px
+      border-radius: 50%
+      background: rgba(0, 0, 0, 0.87)
+      width: 4px
+      height: 4px
+.text-12
+  font-family: "Roboto-Medium", sans-serif
+  font-style: normal
+  font-weight: 500
+  font-size: 12px
+  line-height: 14px
+  color: rgba(0, 0, 0, 0.5)
+
+.link
+  color: #039BE5
+  font-family: "Roboto-Regular", sans-serif
+  font-style: normal
+  font-weight: 400
+  font-size: 14px
+  line-height: 20px
 .line-clamp
   display: block
   display: -webkit-box
@@ -346,7 +472,12 @@ button
   .line-clamp
     -webkit-line-clamp: 3
     height: calc(1em * 20px * 3)
+
 @import "../components/pages/home/style"
+@import "../components/pages/news/style"
+@import "../components/pages/news-topic/style"
+@import "../components/pages/events/style"
+@import "../components/pages/seminar/style"
 
 @import "media"
 // Всегда в конце
