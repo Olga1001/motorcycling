@@ -26,11 +26,11 @@ $(document).ready(function () {
             $(this).find(".calendar-arrow").toggleClass('active');
             $(".news__calendar").slideToggle(300);
         });
+        $("body").click(function () {
+            $(".calendar-arrow").removeClass('active');
+            $(".news__calendar").slideUp(300);
+        });
     }
-    $("body").click(function () {
-        $(".calendar-arrow").removeClass('active');
-        $(".news__calendar").slideUp(300);
-    });
     $(".news__calendar").click(function (e) {
         e.stopPropagation();
     });
