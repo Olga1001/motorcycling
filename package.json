@@ -10,12 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/SytnikArtem/my-gulp-project.git"
   },
-  "author": "SytnikArtem\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b_Artem",
+  "author": "ZhuravelOlha\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b_Olha",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SytnikArtem/my-gulp-project/issues"
-  },
-  "homepage": "https://github.com/SytnikArtem/my-gulp-project#readme",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "del": "^4.0.0",
@@ -41,6 +37,7 @@
     "gulp-less": "^4.0.1",
     "gulp-less2sass": "0.0.2",
     "gulp-tinypng-compress": "^1.2.1",
+    "magnific-popup": "^1.1.0",
     "select2": "^4.0.6-rc.1",
     "slick": "^1.12.2"
   }

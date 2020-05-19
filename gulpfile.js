@@ -53,6 +53,7 @@ gulp.task('libs-css', ['sass'], function(){
 gulp.task('libs-js', function(){
   return gulp.src([
       'app/libs/bootstrap-4.0.0/dist/js/bootstrap.min.js',
+      'app/libs/Magnific-Popup-master/dist/jquery.magnific-popup.min.js',
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

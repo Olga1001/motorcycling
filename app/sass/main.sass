@@ -162,6 +162,20 @@ button
   outline: none
   border: none
   background: none
+.select-white
+  position: relative
+  width: fit-content
+  background: #ffffff url("../img/arrow-select.svg") no-repeat right 16px center / 9px 100%
+  border: 1px solid #939397
+  border-radius: 2px
+  overflow: hidden
+  select
+    height: 34px
+    min-width: 214px
+    appearance: none
+    padding: 0 40px 0 8px
+    background: transparent
+    border: none
 .footer
   background: #E5E5E5
   padding: 10px
@@ -472,12 +486,51 @@ button
   .line-clamp
     -webkit-line-clamp: 3
     height: calc(1em * 20px * 3)
+.mfp-figure, img.mfp-img
+  max-height: 600px!important
+  background: none
+.mfp-figure:after
+  content: none
+img.mfp-img
+  width: auto
+  object-fit: contain
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.65)
+  padding: 0
+.mfp-bottom-bar
+  bottom: calc(100% + 10px)
+  margin: 0
+  top: auto
+  display: flex
+.mfp-counter
+  position: initial
+.mfp-title, .mfp-counter
+  font-family: "Roboto-Regular", sans-serif
+  font-size: 14px
+  line-height: 1
+  color: #FFFFFF
+  padding-right: 5px
+.mfp-close-btn-in .mfp-close
+  right: 0
+  bottom: calc(100% + 10px)
+  top: auto
+  color: transparent
+  height: 13px
+  cursor: pointer!important
+  padding: 0
+  margin: 0
+  opacity: 1
+  width: fit-content
+  background: url("../img/close.svg") no-repeat center / 13px
+  transition: all 0.3s ease
+  &:hover
+    opacity: 0.6
 
 @import "../components/pages/home/style"
 @import "../components/pages/news/style"
 @import "../components/pages/news-topic/style"
 @import "../components/pages/events/style"
 @import "../components/pages/seminar/style"
+@import "../components/pages/gallery/style"
 
 @import "media"
 // Всегда в конце

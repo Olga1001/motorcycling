@@ -45,4 +45,22 @@ $(document).ready(function () {
     }).datepicker('update', new Date());
 });
 
+$(document).ready(function() {
+    //GALLERY
+    $('.gallery-item').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            tCounter: '<span class="mfp-counter">%curr% з %total%</span>'
+        },
+        image: {
+            titleSrc: 'title',
+            verticalFit: true, // Fits image in area vertically
+            tError: '<a href="%url%">The image</a> could not be loaded.'
+        },
+    });
+});
+
 
